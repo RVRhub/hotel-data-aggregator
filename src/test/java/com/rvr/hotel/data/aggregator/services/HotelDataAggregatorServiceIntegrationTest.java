@@ -17,7 +17,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest
-public class HotelDataAggregatorServiceIntegrationTest {
+class HotelDataAggregatorServiceIntegrationTest {
 
     @Autowired
     SourceFileExtractor sourceFileExtractor;

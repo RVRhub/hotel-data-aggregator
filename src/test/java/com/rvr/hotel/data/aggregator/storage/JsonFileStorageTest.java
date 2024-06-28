@@ -2,10 +2,8 @@ package com.rvr.hotel.data.aggregator.storage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
@@ -30,8 +28,8 @@ class JsonFileStorageTest
 		JSONArray jsonArray = jsonFileStorage.getJsonArrayById("3956-coah");
 
 		assertNotNull(jsonArray);
-		assertEquals(jsonArray.get(0), "abc");
-		assertEquals(jsonArray.get(1), 2);
+		assertEquals("abc", jsonArray.get(0));
+		assertEquals(2, jsonArray.get(1));
 	}
 
 	@Test
@@ -49,7 +47,7 @@ class JsonFileStorageTest
 
 		jsonArray = jsonFileStorage.getJsonArrayById(operationId);
 		assertNotNull(jsonArray);
-		assertEquals(jsonArray.get(0), "abc");
-		assertEquals(jsonArray.get(1), 2);
+		assertEquals("abc", jsonArray.get(0));
+		assertEquals(2, jsonArray.get(1));
 	}
 }

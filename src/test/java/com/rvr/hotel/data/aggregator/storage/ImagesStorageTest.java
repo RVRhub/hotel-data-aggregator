@@ -2,7 +2,6 @@ package com.rvr.hotel.data.aggregator.storage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.io.File;
@@ -56,6 +55,6 @@ class ImagesStorageTest
 		List<String> images = imagesStorage.getImages(operationId);
 
 		assertThat(images).isNotNull();
-		assertThat(images.size()).isEqualTo(0);
+		assertThat(images.size()).isZero();
 	}
 }
