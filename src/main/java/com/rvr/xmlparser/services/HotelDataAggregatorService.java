@@ -89,6 +89,16 @@ public class HotelDataAggregatorService
 		return operationId;
 	}
 
+	/**
+	 * Run the runnable asynchronously with a timeout.
+	 * If the operation takes longer than the specified time, it will be cancelled.
+	 * <p>
+	 * It was added to prevent the service from hanging on the image extraction operation,
+	 * because a large number of images don't have a valid URL.
+	 *
+	 * @param runnable the operation to run
+	 * @param seconds  the timeout in seconds
+	 */
 	private void asyncRunWithTimeout(Runnable runnable, int seconds) {
 		CompletableFuture<Void> future = CompletableFuture.runAsync(runnable);
 		try {
