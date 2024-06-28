@@ -6,7 +6,10 @@ Additionally, the application extracts images from the result JSON object.
 The input dataset must be located in the folder: _src/main/resources/storage_.
 Merge the XML and JSON files into a single JSON object use comparator to avoid duplicates based on _giata_id_ and _GiataID_.
 
-At the time of conversion, the application saves the image files to folder _src/main/resources/images_ for files of type _Coah_.
+At the time of aggregation, the application saves the image files to folder _src/main/resources/storage/result/images_ for files of type _Coah_.
+At the moment, image URLs are obtained only from the _content->hotel->images_ section of _Coah_ files to improve performance.
+It can be extended to other paths if needed.
+
 ### Storage
 
 The application uses file storage:
